@@ -17,6 +17,6 @@
       <Button fx:id="searchbtn" alignment="CENTER" layoutX="320.0" layoutY="77.0" mnemonicParsing="false" prefWidth="100.0" text="Search" textAlignment="CENTER" />
       <ScrollBar layoutX="415.0" layoutY="159.0" orientation="VERTICAL" prefHeight="274.0" prefWidth="27.0" />
       <ListView fx:id="recipelistv" layoutX="125.0" layoutY="159.0" prefHeight="274.0" prefWidth="290.0" />
-      <Button fx:id="addbtn" alignment="CENTER" layoutX="469.0" layoutY="447.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Add New Recipe" textAlignment="CENTER" />
+      <Button fx:id="addbtn" alignment="CENTER" layoutX="469.0" layoutY="447.0" mnemonicParsing="false" onAction="#addNewRecipe" prefHeight="25.0" prefWidth="110.0" text="Add New Recipe" textAlignment="CENTER" />
    </children>
 </AnchorPane>
