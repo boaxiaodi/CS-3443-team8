@@ -59,10 +59,6 @@ public class RecipeController{
     private TextField recipeLink;
     
     
-    @FXML
-    private ScrollBar scroll;
-    
-    
     /* This method clears the ListViews and the TextFields.
      */
     private void clear() {
@@ -116,6 +112,7 @@ public class RecipeController{
      * It is triggered when the "Show All Recipes" button
      * is pressed in recipe.fxml.
      */
+    
     @FXML
     private void showAllRecipes(ActionEvent event) throws FileNotFoundException {
     	clear();
