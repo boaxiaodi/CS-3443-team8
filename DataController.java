@@ -1,15 +1,13 @@
 package application;
 
-import javafx.embed.swing.JFXPanel;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.HPos;
-import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class DataController {
     @FXML
@@ -21,33 +19,22 @@ public class DataController {
     @FXML
     private DatePicker datefield;
     @FXML
-    private VBox calendar;
-    private Stage stage;
-
-    public void start(Stage stage){
-        this.stage = stage;
-        initUI();
-        stage.show();
-    }
+    private TextArea calinformation;
+    @FXML
+    private BorderPane trackpane1;
 
     @FXML
-    private void initUI() {
-        calendar.setStyle("-fx-padding: 10;");
-        Scene scene = new Scene(calendar, 550, 350);
-        stage.setScene(scene);
-
-        datefield = new DatePicker();
-
-        GridPane gridPane = new GridPane();
-        gridPane.setHgap(10);
-        gridPane.setVgap(10);
-
-        Label checkInlabel = new Label("Check-In Date:");
-        gridPane.add(checkInlabel, 0, 0);
-
-        GridPane.setHalignment(checkInlabel, HPos.LEFT);
-        gridPane.add(datefield, 0, 1);
-        calendar.getChildren().add(gridPane);
+    private void okbtn(ActionEvent event) {
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("workout");
+        trackpane1.setCenter(view);
     }
+
+//    @FXML
+//    private void handleButtonAction(ActionEvent event){
+//        calinformation.appendText(datefield.getValue().toString() + "\n");
+//
+//
+//    }
 
 }
