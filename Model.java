@@ -97,5 +97,27 @@ public class Model {
 		}
 		
 	}
+	/* This method is used to an exercise to a workout linked list and stores it in workouts.txt
+	 */
+	public static void addWorkout(String exercise) throws  IOException{
+		FileWriter printer = null;
+		try{
+			printer = new FileWriter(file);
+		}
+		catch (IOException e){
+			e.printStackTrace();
+		}
+		workout.add(exercise);
+		for(int i = 0; i < workout.size(); i++){
+			try{
+				printer.write(workout.get(i) + "\n");
+			}
+			catch (IOException e){
+				e.printStackTrace();
+				break;
+			}
+		}
+		printer.flush();
+	}
 	
 }
