@@ -13,11 +13,13 @@ The Tracker button will display a calendar and a new workout button, the new wor
 Known bugs: Whenever you press the "add" button while leaving the "Recipe Name" and "Recipe Link" TextFields empty, it empties both of the ListViews, and the "Show All Recipes" button does not work. If you add another recipe name and recipe link and then press "Add" again, this problem is fixed.
 If you press "Remove" while there are no recipes in the text file, you will receive an error. This is fixed if you add another recipe, select it, then press the "Remove" button.
 If you exit the app and start it up again, the content in the files will be deleted and you will have to re-enter everything.
+There is supposed to be a numbered list right next to the list of recipes, but it is nonfunctional right now.
+Additionally, the calendar option is non-functional right now. The app is only able to store and access data for workouts and recipes, but not match them with a date.
 
 The intended function of the home button was to bring the data forward from the recipes and tracker to the home page as an easy way to see what you have done whether that be a recent workout/recipe or one at random.
 
 The intended function of the tracker was for the calendar to be incorporated into it with the workout and tracker. Where the user would enter a clickable calendar date, then proceed to the next area which would open the workout.java allowing the user to enter the data by adding and removing workouts.
-As of right now, the calendar option is non-functional. The app is only able to store and access data for workouts and recipes, but not match them with a date.
+
 
 
 
