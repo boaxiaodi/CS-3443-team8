@@ -2,60 +2,37 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="startbg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
-    <children>
-        <Pane prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <padding>
-                <Insets top="100.0" />
-            </padding>
-            <children>
-                <ImageView fitHeight="174.0" fitWidth="193.0" layoutX="217.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@image/fitness.png" />
-                    </image>
-                </ImageView>
-                <Label alignment="CENTER" layoutX="497.0" layoutY="550.0" prefHeight="36.0" prefWidth="89.0" text="Team 8" />
-                <Label alignment="CENTER" layoutX="204.0" layoutY="168.0" prefHeight="45.0" prefWidth="193.0" text="Workout App">
-                    <font>
-                        <Font size="24.0" />
-                    </font>
-                </Label>
-            </children>
-        </Pane>
-        <BorderPane prefHeight="600.0" prefWidth="600.0" stylesheets="@sample.css">
-            <top>
-                <HBox prefHeight="114.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <Button fx:id="homebtn" mnemonicParsing="false" onAction="#homebtn" prefHeight="100.0" prefWidth="100.0" stylesheets="@sample.css">
-                            <HBox.margin>
-                                <Insets left="100.0" top="10.0" />
-                            </HBox.margin>
-                        </Button>
-                        <Button fx:id="trackerbtn" mnemonicParsing="false" onAction="#trackerbtn" prefHeight="100.0" prefWidth="100.0" text="Tracker">
-                            <HBox.margin>
-                                <Insets left="50.0" top="10.0" />
-                            </HBox.margin>
-                        </Button>
-                        <Button fx:id="recipebtn" mnemonicParsing="false" onAction="#recipebtn" prefHeight="100.0" prefWidth="100.0" text="Recipes">
-                            <HBox.margin>
-                                <Insets left="50.0" top="10.0" />
-                            </HBox.margin>
-                        </Button>
-                    </children>
-                </HBox>
-            </top>
-            <center>
-                <BorderPane fx:id="mainPane" prefHeight="488.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
-            </center>
-        </BorderPane>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="600.0" stylesheets="@sample.css">
+         <top>
+            <HBox prefHeight="114.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="homebtn" mnemonicParsing="false" onAction="#homebtn" prefHeight="100.0" prefWidth="100.0" stylesheets="@sample.css">
+                     <HBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="trackerbtn" mnemonicParsing="false" onAction="#trackerbtn" prefHeight="100.0" prefWidth="100.0" text="Tracker">
+                     <HBox.margin>
+                        <Insets left="50.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="recipebtn" mnemonicParsing="false" onAction="#recipebtn" prefHeight="100.0" prefWidth="100.0" text="Recipes">
+                     <HBox.margin>
+                        <Insets left="50.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
 </AnchorPane>
