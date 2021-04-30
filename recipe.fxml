@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="recipebg" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RecipeController">
+<AnchorPane prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RecipeController">
    <children>
       <Label layoutX="121.0" layoutY="14.0" prefHeight="27.0" prefWidth="118.0" text="Search recipes">
          <font>
@@ -17,26 +19,27 @@
          </font></Label>
       <TextField fx:id="searchtxt" layoutX="114.0" layoutY="69.0" promptText="Banana Smoothies" />
       <Button fx:id="searchbtn" alignment="CENTER" layoutX="189.0" layoutY="102.0" mnemonicParsing="false" onAction="#searchRecipe" prefWidth="100.0" text="Search" textAlignment="CENTER" />
-      <Button fx:id="addbtn" alignment="CENTER" layoutX="511.0" layoutY="196.0" mnemonicParsing="false" onAction="#addNewRecipe" prefHeight="31.0" prefWidth="58.0" text="Add" textAlignment="CENTER" />
-      <Button fx:id="removeRecipe" alignment="CENTER" layoutX="390.0" layoutY="196.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" text="Remove" textAlignment="CENTER" />
-      <Button fx:id="showAllButton" alignment="CENTER" layoutX="33.0" layoutY="102.0" mnemonicParsing="false" onAction="#showAllRecipes" prefHeight="31.0" prefWidth="136.0" text="Show All Recipes" textAlignment="CENTER" />
+      <Button fx:id="addbtn" alignment="CENTER" layoutX="528.0" layoutY="196.0" mnemonicParsing="false" onAction="#addNewRecipe" prefHeight="25.0" prefWidth="41.0" text="Add" textAlignment="CENTER" />
+      <Button fx:id="removeRecipe" alignment="CENTER" layoutX="390.0" layoutY="196.0" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="60.0" text="Remove" textAlignment="CENTER" />
+      <Button fx:id="showAllButton" alignment="CENTER" layoutX="33.0" layoutY="102.0" mnemonicParsing="false" onAction="#showAllRecipes" prefHeight="25.0" prefWidth="110.0" text="Show All Recipes" textAlignment="CENTER" />
       <Label layoutX="401.0" layoutY="14.0" prefHeight="27.0" prefWidth="168.0" text="Add/Remove Recipe">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="recipeName" layoutX="395.0" layoutY="87.0" />
-      <Label layoutX="445.0" layoutY="59.0" text="Recipe Name" />
-      <TextField fx:id="recipeLink" layoutX="395.0" layoutY="143.0" />
-      <Label layoutX="452.0" layoutY="123.0" text="Recipe Link" />
-      <Label layoutX="76.0" layoutY="136.0" text="Recipes" />
+      <TextField fx:id="recipeName" layoutX="411.0" layoutY="82.0" />
+      <Label layoutX="450.0" layoutY="61.0" text="Recipe Name" />
+      <TextField fx:id="recipeLink" layoutX="411.0" layoutY="143.0" />
+      <Label layoutX="455.0" layoutY="127.0" text="Recipe Link" />
+      <Label layoutX="101.0" layoutY="136.0" text="Recipes" />
       <Label layoutX="233.0" layoutY="136.0" prefHeight="17.0" prefWidth="33.0" text="Links" />
-      <ScrollPane layoutX="25.0" layoutY="156.0" prefHeight="313.0" prefWidth="296.0">
+      <ScrollPane layoutX="25.0" layoutY="156.0" prefHeight="253.0" prefWidth="298.0">
          <content>
             <HBox prefHeight="320.0" prefWidth="304.0">
                <children>
-                  <ListView fx:id="linkList" prefHeight="274.0" prefWidth="143.0" />
-                  <ListView fx:id="recipelistv" prefHeight="274.0" prefWidth="143.0" />
+                  <ListView fx:id="numberList" prefHeight="320.0" prefWidth="26.0" />
+                  <ListView fx:id="recipelistv" onMouseClicked="#click" prefHeight="320.0" prefWidth="130.0" />
+                  <ListView fx:id="linkList" prefHeight="320.0" prefWidth="130.0" />
                </children>
             </HBox>
          </content>
