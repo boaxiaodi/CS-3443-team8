@@ -1,20 +1,21 @@
-//home button
+/*home button*/
 #homebtn{
     -fx-background-image:url("image/home.png");
     -fx-background-size:100% 100%;
 }
-//start background
+/*start background*/
 #startbg{
     -fx-background-color:#F8F8FF;
 }
-//home background
+/*home background*/
 #homebg{
     -fx-background-color:#F8F8FF;
 }
-//tracker background
+/*tracker background*/
 #trackerbg{
     -fx-background-color:#F8F8FF;
-}//recipe background
+}
+/*recipe background*/
  #recipebg{
      -fx-background-color:#F8F8FF;
  }
