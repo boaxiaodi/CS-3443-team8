@@ -13,6 +13,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class DataController {
     @FXML
     private TextArea data1;
@@ -25,7 +27,6 @@ public class DataController {
     @FXML
     private TextArea calinformation;
     @FXML
-    private BorderPane trackpane1;
     private BorderPane trackPane1;
     @FXML
     private Button newWorkoutBtn;
@@ -34,12 +35,12 @@ public class DataController {
 
 
     @FXML
-    private void newWorkoutBtn(ActionEvent event) throws IOException{
+    private void newWorkoutBtn(ActionEvent event) throws IOException {
         FxmlLoader object = new FxmlLoader();
         Pane view = object.getPage("workout");
         trackPane1.setCenter(view);
     }
-    
+
     @FXML
     private void handleButtonAction(ActionEvent event){
 //        calinformation.appendText(datefield.getValue().toString() + "\n");
