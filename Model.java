@@ -27,11 +27,17 @@ public class Model {
 	public static ArrayList<String> recipeList = new ArrayList<String>();
 	public static ArrayList<String> linkList = new ArrayList<String>();
 	public static File file = new File("recipes.txt");
-	/* This method takes the recipe name and link as a
-	 * parameter, adds it to their respective ArrayLists,
-	 * then writes it to the file "recipes.txt".
+	/* This method takes 2 Strings and a boolean as
+	 * parameters: representing the recipe name, the recipe
+	 * link, and whether the recipe is to be added or
+	 * removed, respectively. If it is to be added, then
+	 * the name and link of the recipe are added to their
+	 * respective ArrayLists. If it is to be removed, then
+	 * the name and link of the recipe are removed from
+	 * their respective ArrayLists. Then the items are
+	 * written into the file "recipes.txt".
 	 */
-	public static void addRecipe(String name, String link) throws IOException {
+	public static void addRemoveRecipe(String name, String link, boolean add) throws IOException {
 		FileWriter printer = null;
 		try {
 			printer = new FileWriter(file);
@@ -39,8 +45,15 @@ public class Model {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-		recipes.add(name);
-		links.add(link);
+		if (add == true) {
+			recipes.add(name);
+			links.add(link);
+		}
+		else {
+			recipes.remove(name);
+			links.remove(link);
+		}
+		
 		int s = recipes.size();
 		int i;
 		for (i = 0; i < s; i++) {
