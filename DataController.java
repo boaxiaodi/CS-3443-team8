@@ -30,11 +30,16 @@ public class DataController {
         trackpane1.setCenter(view);
     }
 
-//    @FXML
-//    private void handleButtonAction(ActionEvent event){
+    @FXML
+    private void newWorkoutBtn(ActionEvent event) throws IOException{
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("workout");
+        trackPane1.setCenter(view);
+    }
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event){
 //        calinformation.appendText(datefield.getValue().toString() + "\n");
-//
-//
-//    }
+    }
 
 }
