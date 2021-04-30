@@ -26,6 +26,10 @@ public class Model {
 	public static ArrayList<String> links = new ArrayList<String>();
 	public static ArrayList<String> recipeList = new ArrayList<String>();
 	public static ArrayList<String> linkList = new ArrayList<String>();
+	public static ArrayList<String> workout = new ArrayList<String>();
+	public static ArrayList<String> setss = new ArrayList<String>();
+	public static ArrayList<String> repi = new ArrayList<String>();
+	public static ArrayList<String> workoutList = new ArrayList<String>();
 	public static File file = new File("recipes.txt");
 	/* This method takes 2 Strings and a boolean as
 	 * parameters: representing the recipe name, the recipe
