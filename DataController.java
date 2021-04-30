@@ -2,12 +2,16 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class DataController {
     @FXML
@@ -22,13 +26,12 @@ public class DataController {
     private TextArea calinformation;
     @FXML
     private BorderPane trackpane1;
-
+    private BorderPane trackPane1;
     @FXML
-    private void okbtn(ActionEvent event) {
-        FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("workout");
-        trackpane1.setCenter(view);
-    }
+    private Button newWorkoutBtn;
+    @FXML
+    private Button backButton;
+
 
     @FXML
     private void newWorkoutBtn(ActionEvent event) throws IOException{
