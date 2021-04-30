@@ -112,7 +112,7 @@ public class Model {
 	}
 	/* This method is used to an exercise to a workout linked list and stores it in workouts.txt
 	 */
-	public static void addWorkout(String exercise) throws  IOException{
+	public static void addWorkout(String exercise, String reps, String sets) throws  IOException{
 		FileWriter printer = null;
 		try{
 			printer = new FileWriter(file);
@@ -123,7 +123,7 @@ public class Model {
 		workout.add(exercise);
 		for(int i = 0; i < workout.size(); i++){
 			try{
-				printer.write(workout.get(i) + "\n");
+				printer.write(workout.get(i) + " Reps: " + repi.get(i) + "   X   Sets: " + setss.get(i));
 			}
 			catch (IOException e){
 				e.printStackTrace();
